@@ -28,26 +28,42 @@
         }
         .layout-container {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             max-width: 1200px;
-            margin-top: 30px;
+            margin: 30px auto;
             padding: 20px;
         }
         .form-container {
-            width: 40%;
-            margin-left: 320px;
-        }
-        .entries-container {
-            width: 30%;
             background-color: black;
             padding: 20px;
             border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .entries-container {
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        @media (min-width: 768px) {
+            .layout-container {
+                flex-direction: row;
+            }
+            .form-container {
+                width: 40%;
+                margin-left: 200px;
+            }
+            .entries-container {
+                width: 30%;
+                margin-right: 120px;
+            }
         }
         .Reset:active {
             background-color: white;
             color: red;
         }
-        .Add:active:active {
+        .Add:active {
             background-color: white;
             color: green;
         }
@@ -55,7 +71,7 @@
 </head>
 <body class="bg-gray-300 text-white">
     <div class="layout-container">
-        <div class="form-container bg-custom p-6 shadow-lg rounded-lg">
+        <div class="form-container p-6 shadow-lg rounded-lg">
             <h1 class="text-3xl font-bold mb-6 text-center">Income Expense Calculator</h1>
             <div class="mb-6 text-center mt-2">
                 <div>
